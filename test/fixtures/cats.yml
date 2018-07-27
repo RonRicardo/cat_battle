@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  health_points: 1
+  attack_points: 1
+  defense_points: 1
+  speed_points: 1
+  image_url: MyString
+
+two:
+  health_points: 1
+  attack_points: 1
+  defense_points: 1
+  speed_points: 1
+  image_url: MyString
