@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  cat_id: 1
-  trainer_id: 1
+  cat: one
+  trainer: 
 
 two:
   name: MyString
-  cat_id: 1
-  trainer_id: 1
+  cat: two
+  trainer: 

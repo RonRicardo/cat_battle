@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  trainer_id: 1
+  trainer: one
 
 two:
   name: MyString
-  trainer_id: 1
+  trainer: two
