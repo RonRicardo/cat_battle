@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_202812) do
+ActiveRecord::Schema.define(version: 2018_07_28_172613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "battle_cats", force: :cascade do |t|
     t.string "name"
-    t.integer "cat_id"
-    t.integer "trainer_id"
+    t.bigint "cat_id"
+    t.bigint "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cat_id"], name: "index_battle_cats_on_cat_id"
+    t.index ["trainer_id"], name: "index_battle_cats_on_trainer_id"
   end
 
   create_table "battles", force: :cascade do |t|
@@ -44,9 +46,10 @@ ActiveRecord::Schema.define(version: 2018_07_27_202812) do
 
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.integer "trainer_id"
+    t.bigint "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["trainer_id"], name: "index_teams_on_trainer_id"
   end
 
   create_table "trainers", force: :cascade do |t|
@@ -56,4 +59,6 @@ ActiveRecord::Schema.define(version: 2018_07_27_202812) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "battle_cats", "cats"
+  add_foreign_key "teams", "trainers"
 end

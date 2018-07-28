@@ -3,7 +3,7 @@ class CreateBattleCats < ActiveRecord::Migration[5.2]
     create_table :battle_cats do |t|
       t.string :name
       t.references :cat, foreign_key: true
-      t.refrences :trainer
+      t.references :trainer
 
       t.timestamps
     end
