@@ -1,4 +1,4 @@
-class CatsController < ApplicationController
+class Api::V1::CatsController < ApplicationController
   before_action :set_cat, only: [:show, :update, :destroy]
 
   # GET /cats

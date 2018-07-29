@@ -1,4 +1,3 @@
 class BattleCatSerializer < ActiveModel::Serializer
-  attributes :id, :name, :trainer
-  has_one :cat
+  attributes :id, :name, :team, :cat
 end

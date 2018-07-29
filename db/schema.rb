@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_28_172613) do
+ActiveRecord::Schema.define(version: 2018_07_29_170434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2018_07_28_172613) do
   create_table "battle_cats", force: :cascade do |t|
     t.string "name"
     t.bigint "cat_id"
-    t.bigint "trainer_id"
+    t.bigint "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cat_id"], name: "index_battle_cats_on_cat_id"
-    t.index ["trainer_id"], name: "index_battle_cats_on_trainer_id"
+    t.index ["team_id"], name: "index_battle_cats_on_team_id"
   end
 
   create_table "battles", force: :cascade do |t|

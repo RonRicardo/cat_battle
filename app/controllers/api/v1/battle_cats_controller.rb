@@ -1,4 +1,4 @@
-class BattleCatsController < ApplicationController
+class Api::V1::BattleCatsController < ApplicationController
   before_action :set_battle_cat, only: [:show, :update, :destroy]
 
   # GET /battle_cats
@@ -46,6 +46,6 @@ class BattleCatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def battle_cat_params
-      params.require(:battle_cat).permit(:name, :cat_id, :trainer)
+      params.require(:battle_cat).permit(:name, :cat_id, :team_id)
     end
 end
