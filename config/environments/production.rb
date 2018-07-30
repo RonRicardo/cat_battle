@@ -1,4 +1,8 @@
 Rails.application.configure do
+  ##change me when deployed to HEROKU
+  config.action_cable.mount_path = '/cable'
+  config.action_cable.url = 'wss://localhost:3000/cable'
+  config.action_cable.allowed_request_origins = [ /http:\/\/localhost:*/ ]
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
