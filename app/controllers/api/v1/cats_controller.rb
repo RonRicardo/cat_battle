@@ -18,7 +18,7 @@ class Api::V1::CatsController < ApplicationController
     @cat = Cat.new(cat_params)
 
     if @cat.save
-      render json: @cat, status: :created, location: @cat
+      render json: @cat, status: :created
     else
       render json: @cat.errors, status: :unprocessable_entity
     end

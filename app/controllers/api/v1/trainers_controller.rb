@@ -18,7 +18,7 @@ class Api::V1::TrainersController < ApplicationController
     @trainer = Trainer.new(trainer_params)
 
     if @trainer.save
-      render json: @trainer, status: :created, location: @trainer
+      render json: @trainer, status: :created
     else
       render json: @trainer.errors, status: :unprocessable_entity
     end

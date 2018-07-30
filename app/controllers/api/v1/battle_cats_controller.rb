@@ -18,7 +18,7 @@ class Api::V1::BattleCatsController < ApplicationController
     @battle_cat = BattleCat.new(battle_cat_params)
 
     if @battle_cat.save
-      render json: @battle_cat, status: :created, location: @battle_cat
+      render json: @battle_cat, status: :created
     else
       render json: @battle_cat.errors, status: :unprocessable_entity
     end

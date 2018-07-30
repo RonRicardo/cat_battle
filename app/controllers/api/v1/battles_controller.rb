@@ -18,7 +18,7 @@ class Api::V1::BattlesController < ApplicationController
     @battle = Battle.new(battle_params)
 
     if @battle.save
-      render json: @battle, status: :created, location: @battle
+      render json: @battle, status: :created
     else
       render json: @battle.errors, status: :unprocessable_entity
     end
