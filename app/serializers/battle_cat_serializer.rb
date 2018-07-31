@@ -1,3 +1,4 @@
 class BattleCatSerializer < ActiveModel::Serializer
-  attributes :id, :name, :team, :cat
+  attributes :id, :name
+  belongs_to :cat
 end
