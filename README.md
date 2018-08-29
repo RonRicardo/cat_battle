@@ -1,24 +1,12 @@
-# README
+# Cat Battler
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby API backend for Cat Battler Project
 
-Things you may want to cover:
+Goals:
+* Can create user as "trainer"
 
-* Ruby version
+* Trainer can view many potential cats to add to team
 
-* System dependencies
+* When a cat is added to their team, it becomes a "battle cat" which is able to fight opponents
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Stretch: Users are able to use action cable to live battle other users
